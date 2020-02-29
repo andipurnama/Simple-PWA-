@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manchester City App - Lite</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="My Dicoding Submission"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/icon-3x-144.png">
+    <meta name="theme-color" content="#00838f">
+
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
+</head>
+
+<body>
+
+    <!-- navigasi -->
+    <nav class="cyan darken-3" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo a-site-title center" id="logo-container">City App</a>
+            <a href="javascrit:void(0)" onclick="javascript:window.history.back(-1);return false;" data-target="nav-mobile">
+                <i class="fas fa-arrow-left fa-2x"></i>
+            </a>
+
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+    <!-- ahir navigasi -->
+
+    <div class="container">
+        <div class="row mtop-3">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="center-align">
+                            <img id="clubLogo" alt="Team Logo" width="100" height="100" vspace="25">
+                            <h5 class="font-bold" id="clubName"></h5>
+                            <div id="addToFavorit">
+                                <a class="btn teal">
+                                    <i id="iconFav" class="far fa-star"> &nbsp; Tambah Ke Favorit</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tabs">
+                        <div class="card-content">
+                            <div class="center-align" id="preloader">
+                                <div class="preloader-wrapper activr big">
+                                    <div class="spinner-layer">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="profil_club">
+                                <div class="entry">
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Name</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="name"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Short Name</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="shortName"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Tla</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="tla"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Address</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="address"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Phone</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="phone"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Website</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="website"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Email</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="email"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Founded</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="founded"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Club Colors</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="clubColor"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s5">
+                                            <p>Venue</p>
+                                        </div>
+                                        <div class="col s1">
+                                            :
+                                        </div>
+                                        <div class="col s6">
+                                            <div id="venue"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="center-align">
+                                <h5 class="font-bold">Squad</h5>
+                            </div>
+                            <div id="squad"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <h6>Connect with me in my social media</h6>
+            <ul class="icon-social">
+                <li class="facebook"><a href="https://www.facebook.com/andipurnama21personalaccount">
+                    <i class="fab fa-facebook-square focolor"></i></a></li>
+                <li class="github"><a href="https://github.com/AndiPurnama">
+                    <i class="fab fa-github-square focolor"></i></a></li>
+                <li class="instagram"><a href="https://www.linkedin.com/in/andi-purnama-a0b3b6168/">
+                    <i class="fab fa-linkedin focolor"></i></a></li>
+            </ul>
+
+            <div class="ft-bottom"><p>Copyright ©2019 All Rights Reserved </p></div>
+        </div>
+    </footer>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/helper.js"></script>
+
+    <script src="js/other-details.js"></script>
+    <script src="js/main-db.js"></script>
+    <script src="js/app-db.js"></script>
+    <script src="js/idb.js"></script>
+    
+
+    <script>
+
+        // Periksa Service-Worker
+        if (!('serviceWorker' in navigator)) {
+            console.log('Service Worker Tidak Didukung Browser ini')
+        } else {
+            registerServiceWorker();
+        }
+
+        //Register Service-Worker
+        function registerServiceWorker() {
+            return navigator.serviceWorker.register('service-worker.js')
+            .then(function(registration) {
+                console.log('Registrasi Service Worker Berhasil');
+                return registration;
+            })
+
+            .catch (function(err) {
+                console.error('Registrasi Service Worker Gagal, Reason: ',err);
+            })
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var id = Number(urlParams.get("id"));
+            var isFav = false
+
+            cekData("match_fav", id).then((msg) => {
+                console.log("statusData: resolve = "+msg)
+                document.getElementById("iconFav").classList.add('fas');
+                document.getElementById("iconFav").classList.add('fa-star');
+                document.getElementById("iconFav").innerHTML = " Favorit"
+                getSavedDataByID("match")
+                isFav = true
+            }).catch((msg) => {
+                console.log("statusData: reject = " + msg)
+                console.log("statusData: reject = " + msg)
+                document.getElementById("iconFav").classList.add('far');
+                document.getElementById("iconFav").classList.add('fa-star');
+                document.getElementById("iconFav").innerHTML = " Tambah Ke Favorit"
+                getDetailTeamById()
+                isFav = false
+            })
+
+            var iconFav = document.getElementById("iconFav");
+
+            iconFav.onclick = function() {
+                console.log("Tombol Favorit di Klik");
+                if (isFav) {
+                    deleteDataFav("player_fav",id);
+                    isFav = false
+                } else {
+                    items = getDetailTeamById();
+                    items.then(function (team) {
+                        createData("team", team)
+                    });
+                    isFav = true
+                }
+            };
+        });       
+
+    </script>
+
+</body>
+</html>
